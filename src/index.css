@@ -6,3 +6,6 @@ body {
   background-color: #282d35;
 }
 
+* {
+  box-sizing: border-box;
+}

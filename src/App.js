@@ -21,11 +21,11 @@ Challenge: Project setup
 */
 import Navbar from "./component/Navbar";
 import Main from "./component/Main";
-
+import "./App.css"
 
 export default function App() {
   return (
-      <div>
+      <div className="container">
           <Navbar />
           <Main />
       </div>
