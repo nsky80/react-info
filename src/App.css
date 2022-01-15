@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-
+  box-shadow: 0 2px 4px 0 rgba(65, 65, 65, 0.2);
+  background-color: #21222a;
+  
 }
 
 .nav-logo{
@@ -11,11 +12,24 @@
   width: 80px;
 }
 
+.logo-text{
+  color: #5cd0ef;
+  text-align: left;
+}
 .nav-items{
   list-style: none;
   display: flex;
   padding-right: 10px;
+  color: #c8d4e1;
 
+}
+
+.body-items{
+  color: white;
+}
+
+.body-items > li{
+  color: #acaeb1;
 }
 
 .nav-items > li{
