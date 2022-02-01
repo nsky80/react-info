@@ -1,10 +1,17 @@
-.nav {
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav {
   display: flex;
   align-items: center;
-  height: 90px;
+  height: 60px;
   padding: 30px 25px;
-  box-shadow: 0 2px 4px 0 rgba(65, 65, 65, 0.2);
-  background-color: #21222a;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
 .nav-logo {
@@ -30,10 +37,68 @@
 }
 
 
-.footer {
-  padding: 10px;
-  color: white;
-  background-color: rgb(54, 68, 68);
+nav.dark {
+  background-color: #21222A;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.toggler--slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2B283A;
+}
+
+nav.dark .toggler--light {
+  color: #918E9B;
+}
+
+.toggler--dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -52,7 +117,6 @@
   }
 }
 
-
 /* 
 Challenge: Place the gray react logo in the background
 
@@ -68,13 +132,27 @@ Hint: you'll need to use the following properties:
 those other properties)
 */
 
-.main{
-  padding-left: 25px;
+main{
+  padding: 20px 57px 0px 27px;
   color: white;
-  background-image: url("./images/react-icon-large.png");
+  background-image: url("./images/react-icon-light.png");
   background-repeat: no-repeat;
-  background-position: right 75%;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: white;
+  color: #2B283A;
+}
 
+main.dark {
+  background-image: url("./images/react-icon-dark.png"); 
+  background-color: #282D35;
+  color: white;    
+}
+
+.main--title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
 }
 
 .main--title{
