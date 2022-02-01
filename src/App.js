@@ -22,12 +22,25 @@ Challenge: Project setup
 import Navbar from "./component/Navbar";
 import Main from "./component/Main";
 import "./App.css"
+import React from "react";
 
 export default function App() {
+  const [darkMode, setDarkMode] = React.useState(true)
+
+  function toggleDarkMode(){
+    console.log("Toggled")
+    setDarkMode(!darkMode)
+  }
+
   return (
-      <div className="container">
-          <Navbar />
-          <Main />
-      </div>
+    <div className="container">
+      <Navbar
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+      />
+      <Main
+        darkMode={darkMode}
+      />
+    </div>
   )
 }
